@@ -1,17 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Acendant Blades</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ascendant Blades</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="ui">
-    Enemy HP: <span id="hp">100</span>
-</div>
+    <!-- GAME UI -->
 
-<script type="module" src="game.js"></script>
+    <div id="ui">
+
+        <div class="panel">
+
+            <h1>⚔ Ascendant Blades</h1>
+
+            <div>
+                ❤️ Health:
+                <span id="health">
+                    100
+                </span>
+            </div>
+
+            <div>
+                💪 Strength:
+                <span id="strength">
+                    10
+                </span>
+            </div>
+
+            <div>
+                🛡 Defense:
+                <span id="defense">
+                    0
+                </span>
+            </div>
+
+            <div>
+                🪙 Coins:
+                <span id="coins">
+                    0
+                </span>
+            </div>
+
+            <div>
+                🌎 Realm:
+                <span id="realm">
+                    Verdant Realm
+                </span>
+            </div>
+
+        </div>
+
+
+        <div id="equipment">
+
+            <div>
+                ⚔ Blade:
+                <span id="blade">
+                    Fists
+                </span>
+            </div>
+
+
+            <div>
+                🛡 Shield:
+                <span id="shield">
+                    None
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Enemy Health Bars -->
+
+    <div id="enemy-bars"></div>
+
+
+
+    <!-- Game -->
+
+    <script type="module" src="game.js"></script>
+
 
 </body>
+
 </html>
