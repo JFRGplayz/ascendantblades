@@ -1,17 +1,441 @@
+/* =========================
+   ASCENDANT BLADES STYLE
+========================= */
+
+
 body {
-    margin:0;
-    overflow:hidden;
-    font-family:Arial;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: black;
+
+    font-family:
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
 }
+
+
 
 canvas {
-    display:block;
+
+    display: block;
+
 }
 
+
+
+/* =========================
+   MAIN UI
+========================= */
+
+
 #ui {
-    position:absolute;
-    top:20px;
-    left:20px;
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    color: white;
+
+    z-index: 10;
+
+}
+
+
+
+.panel {
+
+    background:
+    rgba(0,0,0,0.55);
+
+
+    border:
+
+    2px solid
+    rgba(255,255,255,0.25);
+
+
+    border-radius: 15px;
+
+
+    padding: 18px;
+
+
+    width: 230px;
+
+
+    backdrop-filter: blur(8px);
+
+
+    box-shadow:
+
+    0 0 20px
+    rgba(0,0,0,0.5);
+
+}
+
+
+
+.panel h1 {
+
+    margin-top: 0;
+
+    font-size: 22px;
+
+    text-align: center;
+
+}
+
+
+
+.panel div {
+
+    margin: 8px 0;
+
+    font-size: 18px;
+
+}
+
+
+
+
+
+/* =========================
+   EQUIPMENT
+========================= */
+
+
+#equipment {
+
+    position: absolute;
+
+
+    bottom: 25px;
+
+    left: 50%;
+
+
+    transform:
+    translateX(-50%);
+
+
     color:white;
+
+
+    background:
+    rgba(0,0,0,0.55);
+
+
+    border:
+
+    2px solid
+    rgba(255,255,255,0.25);
+
+
+    border-radius:15px;
+
+
+    padding:15px;
+
+
+    min-width:260px;
+
+
+    text-align:center;
+
+
+    font-size:18px;
+
+
+    backdrop-filter:blur(8px);
+
+
+}
+
+
+
+
+
+/* =========================
+   ENEMY HEALTH BARS
+========================= */
+
+
+#enemy-bars {
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+
+
+.enemy-bar {
+
+
+    position:absolute;
+
+
+    width:90px;
+
+
+    height:12px;
+
+
+    background:#222;
+
+
+    border:
+
+    2px solid black;
+
+
+    border-radius:8px;
+
+
+    overflow:hidden;
+
+
+    transform:
+    translate(-50%, -50%);
+
+
+}
+
+
+
+.enemy-health {
+
+
+    height:100%;
+
+
+    width:100%;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #ff2222,
+        #ff8800
+    );
+
+
+}
+
+
+
+
+
+/* =========================
+   DAMAGE NUMBERS
+========================= */
+
+
+.damage-number {
+
+
+    position:absolute;
+
+
+    color:white;
+
+
     font-size:24px;
+
+
+    font-weight:bold;
+
+
+    text-shadow:
+
+    2px 2px 4px black;
+
+
+    pointer-events:none;
+
+
+    animation:
+
+    floatDamage 0.8s forwards;
+
+
+}
+
+
+
+
+@keyframes floatDamage {
+
+
+    from {
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+
+    to {
+
+        opacity:0;
+
+        transform:
+        translateY(-60px);
+
+    }
+
+}
+
+
+
+
+
+
+/* =========================
+   ITEM POPUPS
+========================= */
+
+
+.item-popup {
+
+
+    position:absolute;
+
+
+    top:40%;
+
+
+    left:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    color:white;
+
+
+    font-size:30px;
+
+
+    font-weight:bold;
+
+
+    text-align:center;
+
+
+    text-shadow:
+
+    3px 3px 8px black;
+
+
+    animation:
+
+    popup 2s forwards;
+
+
+}
+
+
+
+
+@keyframes popup {
+
+
+    0% {
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-20%);
+
+    }
+
+
+    20% {
+
+        opacity:1;
+
+    }
+
+
+    100% {
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-80%);
+
+    }
+
+}
+
+
+
+
+
+
+/* =========================
+   RARITY COLOURS
+========================= */
+
+
+.common {
+
+    color:white;
+
+}
+
+
+.uncommon {
+
+    color:#55ff55;
+
+}
+
+
+.rare {
+
+    color:#5599ff;
+
+}
+
+
+.epic {
+
+    color:#bb55ff;
+
+}
+
+
+.legendary {
+
+    color:#ffaa22;
+
+}
+
+
+.mythic {
+
+    color:#ff2255;
+
 }
